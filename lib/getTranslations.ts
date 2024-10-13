@@ -7,9 +7,9 @@ export async function getTranslations(locale: string) {
   await dbConnect();
 
   // Fetch translations from the database
-  const Product = await Product.find().lean();
+  const Products = await Product.find().lean();
 
-  const messagesFromDb = Product.reduce((messages: any, content) => {
+  const messagesFromDb = Products.reduce((messages: any, content) => {
     messages[content.page] = content.content[locale];
     return messages;
   }, {});
