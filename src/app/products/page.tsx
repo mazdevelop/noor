@@ -19,7 +19,7 @@ const Products = () => {
   const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 
