@@ -30,7 +30,9 @@ const Header: React.FC = () => {
         y: -20,
         duration: 0.3,
         ease: "power3.in",
-        onComplete:()=> gsap.set(menuRef.current, { display: "none" }),
+        onComplete: () => {
+          gsap.set(menuRef.current, { display: "none" });
+        },
       });
     }
   }, [isMenuOpen]);
