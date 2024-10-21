@@ -11,10 +11,10 @@ const AboutUs: React.FC = () => {
             <div key={num} className="rounded-lg overflow-hidden">
               <Image
                 src="/images/IMG_7614.JPG"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
                 alt={`Image ${num}`}
-                className="object-cover w-30 h-30 rounded-md"
+                className="object-cover w-40 h-30 rounded-md"
               />
             </div>
           ))}

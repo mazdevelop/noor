@@ -65,7 +65,7 @@ const BlogSum = () => {
               <p className="text-gray-600 mb-4">{article.excerpt}</p>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-primary-500">{article.category}</span>
-                <button className="px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors duration-200">
+                <button className="px-2 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors duration-200 text-sm">
                   ادامه مطلب
                 </button>
               </div>

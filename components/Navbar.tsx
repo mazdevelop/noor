@@ -35,6 +35,10 @@ const Header: React.FC = () => {
     }
   }, [isMenuOpen]);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header ref={headerRef} className="bg-gradient-to-r from-primary-50 to-primary-100 text-primary-900">
       <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row justify-between items-center">
@@ -58,10 +62,10 @@ const Header: React.FC = () => {
         <nav className="hidden sm:block">
           <ul className="flex space-x-6 text-sm font-medium">
             <li><Link href="/" className="hover:text-primary-600 transition-colors duration-300 ml-1">خانه</Link></li>
-            <li><Link href="/shop" className="hover:text-primary-600 transition-colors duration-300">محصولات</Link></li>
-            <li><Link href="/products" className="hover:text-primary-600 transition-colors duration-300">تماس با ما</Link></li>
+            <li><Link href="/products" className="hover:text-primary-600 transition-colors duration-300">محصولات</Link></li>
+            <li><Link href="/blog" className="hover:text-primary-600 transition-colors duration-300">وبلاگ</Link></li>
+            <li><Link href="/contact-us" className="hover:text-primary-600 transition-colors duration-300">تماس با ما</Link></li>
             <li><Link href="/about" className="hover:text-primary-600 transition-colors duration-300">درباره ما</Link></li>
-            <li><Link href="/blog" className="hover:text-primary-600 transition-colors duration-300"></Link></li>
           </ul>
         </nav>
       </div>
@@ -106,18 +110,18 @@ const Header: React.FC = () => {
           <i className="ri-close-line text-3xl"></i>
         </button>
         <ul ref={menuRef} className="space-y-4 text-center mt-8">
-          <li><Link href="/" className="block text-xl hover:text-primary-600 transition-colors duration-300">خانه</Link></li>
-          <li><Link href="/products" className="block text-xl hover:text-primary-600 transition-colors duration-300">محصولات</Link></li>
-          <li><Link href="/blog" className="block text-xl hover:text-primary-600 transition-colors duration-300">وبلاگ</Link></li>
-          <li><Link href="/about" className="block text-xl hover:text-primary-600 transition-colors duration-300">درباره ما</Link></li>
-          <li><Link href="/contact" className="block text-xl hover:text-primary-600 transition-colors duration-300">تماس با ما</Link></li>
+          <li><Link href="/" className="block text-xl hover:text-primary-600 transition-colors duration-300" onClick={handleLinkClick}>خانه</Link></li>
+          <li><Link href="/products" className="block text-xl hover:text-primary-600 transition-colors duration-300" onClick={handleLinkClick}>محصولات</Link></li>
+          <li><Link href="/blog" className="block text-xl hover:text-primary-600 transition-colors duration-300" onClick={handleLinkClick}>وبلاگ</Link></li>
+          <li><Link href="/about" className="block text-xl hover:text-primary-600 transition-colors duration-300" onClick={handleLinkClick}>درباره ما</Link></li>
+          <li><Link href="/contact" className="block text-xl hover:text-primary-600 transition-colors duration-300" onClick={handleLinkClick}>تماس با ما</Link></li>
         </ul>
         <div className="mt-8 flex flex-col items-center space-y-4">
           <div className="flex items-center">
             <i className="ri-customer-service-line mr-2 text-sm text-primary-500"></i>
             <span className="text-sm font-medium">09123456789</span>
           </div>
-          <Link href="/account" className="border-2 border-primary-500 text-primary-500 px-6 py-2 rounded-full hover:bg-primary-500 hover:text-white transition-colors duration-300 text-center font-medium">
+          <Link href="/account" className="border-2 border-primary-500 text-primary-500 px-6 py-2 rounded-full hover:bg-primary-500 hover:text-white transition-colors duration-300 text-center font-medium" onClick={handleLinkClick}>
             حساب کاربری
           </Link>
         </div>
