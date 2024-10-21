@@ -13,7 +13,7 @@ export default function ContactUsPage() {
   const [errors, setErrors] = useState<Partial<FormState>>({});
 
   const validateForm = () => {
-    let formErrors: Partial<FormState> = {};
+    const formErrors: Partial<FormState> = {};
     if (!form.name) formErrors.name = 'نام لازم است';
     if (!form.email || !/\S+@\S+\.\S+/.test(form.email)) {
       formErrors.email = 'ایمیل معتبر نیست';
