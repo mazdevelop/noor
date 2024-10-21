@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="bg-gray-100 p-4 sm:p-6">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">ارتباط با ما</h1>
+        <h1 className="text-xl sm:text-xl font-bold text-center mb-6 sm:mb-8">ارتباط با ما</h1>
         
         <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
           <h2 className="text-xl sm:text-xl font-bold mb-3 sm:mb-4">اطلاعات تماس</h2>
