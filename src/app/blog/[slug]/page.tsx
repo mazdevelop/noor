@@ -44,7 +44,7 @@ const BlogPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4 text-center">{blog.title}</h1>
+      <h1 className="text-xl font-bold mb-4 text-center">{blog.title}</h1>
       <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
         <span>{new Date(blog.date).toLocaleDateString('fa-IR')}</span>
         <div className="flex items-center space-x-4">

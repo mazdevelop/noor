@@ -30,11 +30,11 @@ const BlogsPage = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">وبلاگ</h1>
+      <h1 className="text-xl font-bold mb-6 text-center">وبلاگ</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs.map((blog) => (
           <div key={blog.slug} className="bg-white p-4 rounded-lg shadow-lg">
-            <Link href={`/blogs/${blog.slug}`}>
+            <Link href={`/blog/${blog.slug}`}>
               <div>
                 {/* نمایش عکس شاخص */}
                 <Image
