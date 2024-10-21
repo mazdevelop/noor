@@ -1,8 +1,7 @@
 'use client'
 import { useState } from 'react';
 import React from 'react';
-import Gear from '../../../components/Gear';
-
+import Image from 'next/image';
 interface FormState {
   name: string;
   email: string;
@@ -41,7 +40,14 @@ export default function ContactUsPage() {
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex items-center justify-center">
-          <Gear />
+        <Image
+                className="rounded-md object-cover w-full h-auto"
+                src='/images/Call-us-new.jpg'
+                alt='تماس با ما'
+                width={500}
+                height={500}
+                layout="responsive"
+              />
         </div>
         <div>
           <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
