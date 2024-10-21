@@ -27,7 +27,7 @@ const Products = () => {
   for (let i = 1; i <= Math.ceil(products.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-
+  // ۰۹۱۲۳۴۵۶۷۸۹
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-6">محصولات</h1>

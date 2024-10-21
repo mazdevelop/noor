@@ -23,17 +23,13 @@ const AboutUs: React.FC = () => {
         {/* About Us Section */}
         <div className="w-full md:w-2/3 mt-6 md:mt-0 md:pr-8">
           <h1 className="text-xl md:text-2xl font-semibold text-orange-500 mb-4">ما در غزال نور پارسا چه کار می‌کنیم؟</h1>
-          <p className="text-gray-600 leading-loose">
-            لورم ایپسوم متن ساختگی با تولید سادگی از صنعت چاپ و با استفاده از طراحان گرافیک است. 
-            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآرایچنان که لازم است...
-          </p>
+          <p className="text-gray-600 leading-loose">ما در صنایع روشنایی و مبلمان شهری غزال نور با بیش از دو دهه سابقه در این زمینه، از فاز اول طراحی تا تولید محصولات ضمن ارائه بهترین کیفیت و خدمات پس از فروش  هرماه شما هستیم</p>
         </div>
       </div>
-
       {/* Contact Section */}
       <div className="bg-gray-200 mt-8 p-4 md:p-6 rounded-lg">
         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
-          {['ساعات کاری: روزهای کاری ساعت ۹ تا ۲۱', 'آدرس: تهران، میدان انقلاب، پلاک ۴', 'تلفن: 09123456789'].map((info, index) => (
+          {['۱۰ سال خدمات پس از فروش', '۲ سال ضمانت رنگ', '۵ سال ضمانت سازه'].map((info, index) => (
             <div key={index} className="flex items-center">
               <div className="bg-orange-500 ml-2 text-white p-2 md:p-3 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

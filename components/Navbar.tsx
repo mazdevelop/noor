@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
             <div className="flex items-center ml-2">
               <i className="ri-customer-service-line mr-2 text-sm text-primary-500"></i>
-              <span className="text-sm font-medium">09123456789</span>
+              <span className="text-sm font-medium">۰۹۱۲۵۰۰۰۹۷۹</span>
             </div>
             <Link href="/account" className="w-full sm:w-auto border-2 border-primary-500 text-primary-500 px-6 py-2 rounded-full hover:bg-primary-500 hover:text-white transition-colors duration-300 text-center font-medium">
               حساب کاربری
