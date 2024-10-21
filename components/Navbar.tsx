@@ -77,7 +77,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex items-center space-x-4 mb-4 sm:mb-0">
             <div>
-              <h1 className="text-2xl font-bold text-primary-800">غزال نور پارسا</h1>
+              <h1 className="text-2xl font-bold text-primary-800">غزال نور </h1>
               <span className="text-sm text-primary-600">مبلمان شهری</span>
             </div>
           </div>

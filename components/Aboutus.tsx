@@ -22,7 +22,7 @@ const AboutUs: React.FC = () => {
 
         {/* About Us Section */}
         <div className="w-full md:w-2/3 mt-6 md:mt-0 md:pr-8">
-          <h1 className="text-xl md:text-2xl font-semibold text-orange-500 mb-4">ما در غزال نور پارسا چه کار می‌کنیم؟</h1>
+          <h1 className="text-xl md:text-2xl font-semibold text-orange-500 mb-4">ما در غزال نور چه کار می‌کنیم؟</h1>
           <p className="text-gray-600 leading-loose">ما در صنایع روشنایی و مبلمان شهری غزال نور با بیش از دو دهه سابقه در این زمینه، از فاز اول طراحی تا تولید محصولات ضمن ارائه بهترین کیفیت و خدمات پس از فروش  هرماه شما هستیم</p>
         </div>
       </div>
