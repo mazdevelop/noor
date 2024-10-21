@@ -64,8 +64,8 @@ const Header: React.FC = () => {
             <li><Link href="/" className="hover:text-primary-600 transition-colors duration-300 ml-1">خانه</Link></li>
             <li><Link href="/products" className="hover:text-primary-600 transition-colors duration-300">محصولات</Link></li>
             <li><Link href="/blog" className="hover:text-primary-600 transition-colors duration-300">وبلاگ</Link></li>
-            <li><Link href="/contact-us" className="hover:text-primary-600 transition-colors duration-300">تماس با ما</Link></li>
             <li><Link href="/about" className="hover:text-primary-600 transition-colors duration-300">درباره ما</Link></li>
+            <li><Link href="/contact-us" className="hover:text-primary-600 transition-colors duration-300">تماس با ما</Link></li>
           </ul>
         </nav>
       </div>

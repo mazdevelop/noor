@@ -1,18 +1,14 @@
-'use client';
-
 import React from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-const ProductPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
+const ProductPage = ({ params }: { params: { id: string } }) => {
+  const { id } = params;
 
-  // برای سادگی، اطلاعات محصول به صورت ثابت نمایش داده می‌شود.
+  // اطلاعات محصول (نمونه)
   const product = {
     id,
     name: `محصول ${id}`,
-    description: `توضیحات محصول ${id}`,
+    description: `توضیحات مربوط به محصول ${id}`,
     image: '/images/IMG_6980.JPG',
   };
 

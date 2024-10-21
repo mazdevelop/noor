@@ -1,5 +1,5 @@
+'use client'
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 
 interface FormState {
   name: string;
@@ -10,16 +10,15 @@ interface FormState {
 export default function ContactUsPage() {
   const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<Partial<FormState>>({});
-  const { locale } = useRouter();
 
   const validateForm = () => {
     let formErrors: Partial<FormState> = {};
-    if (!form.name) formErrors.name = locale === 'fa' ? 'نام لازم است' : 'Name is required';
+    if (!form.name) formErrors.name = 'نام لازم است';
     if (!form.email || !/\S+@\S+\.\S+/.test(form.email)) {
-      formErrors.email = locale === 'fa' ? 'ایمیل معتبر نیست' : 'Email is not valid';
+      formErrors.email = 'ایمیل معتبر نیست';
     }
     if (!form.message) {
-      formErrors.message = locale === 'fa' ? 'پیام لازم است' : 'Message is required';
+      formErrors.message = 'پیام لازم است';
     }
     return formErrors;
   };
@@ -28,41 +27,48 @@ export default function ContactUsPage() {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
-      console.log('Form submitted successfully');
+      console.log('فرم با موفقیت ارسال شد');
+      // Reset form
+      setForm({ name: '', email: '', message: '' });
     } else {
       setErrors(formErrors);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 space-y-4">
       <div>
-        <label>{locale === 'fa' ? 'نام' : 'Name'}</label>
+        <label className="block text-sm font-medium mb-1">نام</label>
         <input
           type="text"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
+          className="w-full border border-gray-300 p-2 rounded"
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
       </div>
       <div>
-        <label>{locale === 'fa' ? 'ایمیل' : 'Email'}</label>
+        <label className="block text-sm font-medium mb-1">ایمیل</label>
         <input
           type="email"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
+          className="w-full border border-gray-300 p-2 rounded"
         />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
       </div>
       <div>
-        <label>{locale === 'fa' ? 'پیام' : 'Message'}</label>
+        <label className="block text-sm font-medium mb-1">پیام</label>
         <textarea
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
+          className="w-full border border-gray-300 p-2 rounded h-32"
         ></textarea>
-        {errors.message && <p>{errors.message}</p>}
+        {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
       </div>
-      <button type="submit">{locale === 'fa' ? 'ارسال' : 'Submit'}</button>
+      <button type="submit" className="w-full bg-primary-600 text-white p-2 rounded">
+        ارسال
+      </button>
     </form>
   );
 }
