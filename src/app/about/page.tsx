@@ -39,7 +39,7 @@ const Contact = () => {
 
           {/* نقشه */}
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold mb-4">مکان ما</h2>
+            <h2 className="text-xl font-semibold mb-4">موقعیت جغرافیایی:</h2>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1605618398935!2d-122.41941528469263!3d37.774929279759154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064ec0d678d%3A0x3bafc1a5ae75b1b0!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2s!4v1625027466216!5m2!1sen!2s"
