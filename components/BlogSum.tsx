@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const BlogSum = () => {
-  const [articles, setArticles] = useState([
+  const [articles] = useState([
     { id: 1, title: 'مقاله ۱', excerpt: 'خلاصه مقاله ۱...', category: 'مبلمان شهری', image: '/images/IMG_3204.JPG' },
     { id: 2, title: 'مقاله ۲', excerpt: 'خلاصه مقاله ۲...', category: 'تجهیزات روشنایی - ترافیکی', image: '/images/IMG_3204.JPG' },
     { id: 3, title: 'مقاله ۳', excerpt: 'خلاصه مقاله ۳...', category: 'مبلمان شهری', image: '/images/IMG_3204.JPG' },
