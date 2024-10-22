@@ -22,16 +22,16 @@ const AboutUs: React.FC = () => {
 
         {/* About Us Section */}
         <div className="w-full md:w-2/3 mt-6 md:mt-0 md:pr-8">
-          <h1 className="text-xl md:text-2xl font-semibold text-orange-500 mb-4">ما در غزال نور  چه کار می‌کنیم؟</h1>
-          <p className="text-gray-600 leading-loose">ما در صنایع روشنایی و مبلمان شهری غزال نور با بیش از دو دهه سابقه در این زمینه، از فاز اول طراحی تا تولید محصولات ضمن ارائه بهترین کیفیت و خدمات پس از فروش  همراه شما هستیم</p>
+          <h1 className="text-xl md:text-2xl font-semibold text-tertiary-950 mb-4">ما در غزال نور  چه کار می‌کنیم؟</h1>
+          <p className="text-tertiary-600 leading-loose">ما در صنایع روشنایی و مبلمان شهری غزال نور با بیش از دو دهه سابقه در این زمینه، از فاز اول طراحی تا تولید محصولات ضمن ارائه بهترین کیفیت و خدمات پس از فروش  همراه شما هستیم</p>
         </div>
       </div>
       {/* Contact Section */}
-      <div className="bg-gray-200 mt-8 p-4 md:p-6 rounded-lg">
+      <div className="bg-secondary-500-200 mt-8 p-4 md:p-6 rounded-lg">
         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
           {['۱۰ سال خدمات پس از فروش', '۲ سال ضمانت رنگ', '۵ سال ضمانت سازه'].map((info, index) => (
             <div key={index} className="flex items-center">
-              <div className="bg-orange-500 ml-2 text-white p-2 md:p-3 rounded-full">
+              <div className="bg-primary-400 ml-2 text-white p-2 md:p-3 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h3M3 14h3M9 6h6m0 0h3m-3 0h3M9 6v12m6-12v12" />
                 </svg>

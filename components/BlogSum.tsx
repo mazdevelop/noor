@@ -27,7 +27,7 @@ const BlogSum = () => {
   
     return (
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl text-center font-bold mb-8 text-primary-500">وبلاگ</h1>
+        <h1 className="text-3xl text-center font-bold mb-8 text-primary-400">وبلاگ</h1>
         
         {/* Search and Filter */}
         <div className="mb-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
@@ -64,8 +64,8 @@ const BlogSum = () => {
                 <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
                 <p className="text-gray-600 mb-4">{article.excerpt}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-primary-500">{article.category}</span>
-                  <button className="px-2 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors duration-200 text-sm">
+                  <span className="text-sm text-primary-400">{article.category}</span>
+                  <button className="px-2 py-2 bg-primary-400 text-white rounded-full hover:bg-primary-600 transition-colors duration-200 text-sm">
                     ادامه مطلب
                   </button>
                 </div>

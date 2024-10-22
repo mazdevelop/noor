@@ -4,36 +4,39 @@
 
 @font-face {
   font-family: 'IRANSans';
-  src: url('/fonts/IRANSansWeb.woff2') format('woff2'),
-       url('/fonts/IRANSansWeb.woff') format('woff'),
-       url('/fonts/IRANSansWeb.ttf') format('truetype');
+  src: url('./fonts/Vazirmatn-ExtraBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'IRANSans';
-  src: url('/fonts/IRANSansWeb_Bold.woff2') format('woff2'),
-       url('/fonts/IRANSansWeb_Bold.woff') format('woff'),
-       url('/fonts/IRANSansWeb_Bold.ttf') format('truetype');
+  src: url('./fonts/Vazirmatn-ExtraLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'IRANSans';
-  src: url('/fonts/IRANSansWeb_Light.woff2') format('woff2'),
-       url('/fonts/IRANSansWeb_Light.woff') format('woff'),
-       url('/fonts/IRANSansWeb_Light.ttf') format('truetype');
+  src: url('./fonts/Vazirmatn-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'IRANSans';
-  src: url('/fonts/IRANSansWeb_Medium.woff2') format('woff2'),
-       url('/fonts/IRANSansWeb_Medium.woff') format('woff'),
-       url('/fonts/IRANSansWeb_Medium.ttf') format('truetype');
+  src: url('./fonts/Vazirmatn-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('./fonts/Vazirmatn-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

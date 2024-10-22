@@ -45,7 +45,7 @@ const ProductSlider = () => {
       </div>
       
       {/* Product slider section */}
-      <div className="flex-grow relative bg-primary-500 rounded-lg p-4 overflow-hidden">
+      <div className="flex-grow relative bg-primary-300 rounded-lg p-4 overflow-hidden">
         <div className={`flex ${isMobile ? 'flex-nowrap' : 'flex-wrap'} transition-transform duration-300 ease-in-out`} 
              style={isMobile ? { transform: `translateX(${currentIndex * 100}%)` } : {}}>
           {products.map((product) => (
