@@ -245,7 +245,7 @@ const ProductsPage = () => {
         {currentProducts.map((product) => (
           <div 
             key={product.id} 
-            className="bg-white shadow-md rounded-lg p-4 cursor-pointer hover:shadow-lg transition-shadow duration-300" 
+            className="bg-tertiary-200 shadow-md rounded-lg p-4 cursor-pointer hover:shadow-lg transition-shadow duration-300" 
             onClick={() => handleProductClick(product)}
           >
             <div>
@@ -280,8 +280,8 @@ const ProductsPage = () => {
                 onClick={() => setCurrentPage(page)}
                 className={`px-4 py-2 rounded-lg ${
                   currentPage === page 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-100'
+                    ? 'bg-primary-300 text-white' 
+                    : 'bg-primary-100'
                 }`}
               >
                 {page}
