@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="bg-gray-50 p-4 md:p-8">
+    <div className="bg-secondary-200 p-4 md:p-8">
       <div className="flex flex-col md:flex-row">
         {/* Images Section */}
         <div className="w-full md:w-1/3 grid grid-cols-2 gap-2 md:gap-4">
@@ -22,27 +22,26 @@ const AboutUs: React.FC = () => {
 
         {/* About Us Section */}
         <div className="w-full md:w-2/3 mt-6 md:mt-0 md:pr-8">
-          <h1 className="text-xl md:text-2xl font-semibold text-tertiary-950 mb-4">ما در غزال نور  چه کار می‌کنیم؟</h1>
-          <p className="text-tertiary-600 leading-loose">ما در صنایع روشنایی و مبلمان شهری غزال نور با بیش از دو دهه سابقه در این زمینه، از فاز اول طراحی تا تولید محصولات ضمن ارائه بهترین کیفیت و خدمات پس از فروش  همراه شما هستیم</p>
+          <h2 className="text-lg md:text-xl font-semibold text-tertiary-950 mb-4 font-sahel">تولید کننده برتر مبلمان شهری</h2>
+          <p className="text-tertiary-600 leading-loose mb-6">در کارخانه غزال نور پارسا ما با اشتیاق و تعهد و سال‌ها تجربه در صنعت تولید مبلمان شهری، تخصصی عمیق در طراحی و ساخت انواع محصولات از جمله پایه چراغ‌های مدرن، برج‌های پرچم با استحکام بالا، برج‌های برق مقاوم، پایه دوربین های شهری ، نیمکت‌های شیک و راحت، سطل‌های زباله با طراحی بهینه، و سایر المان‌های فلزی تزئینی داریم.</p>
+
+          <h3 className="text-md md:text-lg font-semibold text-tertiary-950 mb-3 font-sahel">مزیت‌های محصولات ما:</h3>
+          <ul className="text-tertiary-600 leading-loose list-disc pr-6 space-y-2">
+            <li>
+              <span className="font-semibold">کیفیت برتر:</span> استفاده از مواد اولیه باکیفیت و مقاوم در تمامی محصولات، که تضمین می‌کند مبلمان شهری ما در برابر شرایط مختلف جوی و استفاده طولانی‌مدت دوام می اورد.
+            </li>
+            <li>
+              <span className="font-semibold">طراحی خلاقانه:</span> ما به جزئیات اهمیت می‌دهیم و طراحی محصولات ما به گونه‌ای است که علاوه بر کارایی بالا، زیبایی بصری فضاهای شهری را نیز ارتقاء می‌دهد.
+            </li>
+            <li>
+              <span className="font-semibold">راهکارهای سفارشی:</span> ما می‌توانیم محصولات را بر اساس نیازهای خاص هر پروژه به صورت اختصاصی طراحی و تولید کنیم تا با محیط و خواسته‌های مشتریان به‌خوبی هماهنگ شود.
+            </li>
+            <li>
+              <span className="font-semibold">تأثیر مثبت بر جامعه:</span> با تولید مبلمان شهری باکیفیت، ما به بهبود تجربه زندگی شهروندان و افزایش رفاه عمومی کمک می‌کنیم.
+            </li>
+          </ul>
         </div>
-      </div>
-      {/* Contact Section */}
-      <div className="bg-secondary-500-200 mt-8 p-4 md:p-6 rounded-lg">
-        <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
-          {['۱۰ سال خدمات پس از فروش', '۲ سال ضمانت رنگ', '۵ سال ضمانت سازه'].map((info, index) => (
-            <div key={index} className="flex items-center">
-              <div className="bg-primary-400 ml-2 text-white p-2 md:p-3 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h3M3 14h3M9 6h6m0 0h3m-3 0h3M9 6v12m6-12v12" />
-                </svg>
-              </div>
-              <div className="ml-2 md:ml-4">
-                <p className="text-xs md:text-sm text-gray-600">{info}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      </div>    
     </div>
   );
 };

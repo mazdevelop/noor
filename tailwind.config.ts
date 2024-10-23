@@ -20,7 +20,8 @@ const config: Config = {
     extend: {
       gridTemplateColumns: {},
       fontFamily: {
-        iran: ["IRANSans", "sans-serif"],
+        vazir: ["Vazir", "sans-serif"],
+        sahel: ["Sahel", "sans-serif"],
       },
       inset: {},
       padding: {},

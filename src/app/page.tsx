@@ -4,6 +4,7 @@ import AboutUs from '../../components/Aboutus';
 import OurExperts from '../../components/OurExperts';
 import BlogSum from '../../components/BlogSum';
 import ProductSum from '../../components/ProductSum';
+import QualityAssurance from '../../components/QualityAssurance';
 const HomePage: React.FC = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const HomePage: React.FC = () => {
       <AboutUs/>
       <OurExperts />
       <ProductSum />
+      <QualityAssurance/>
       <BlogSum />
     </div>
   );

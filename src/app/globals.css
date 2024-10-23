@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'IRANSans';
+  font-family: 'Vazir';
   src: url('./fonts/Vazirmatn-ExtraLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: 'IRANSans';
+  font-family: 'Vazir';
   src: url('./fonts/Vazirmatn-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: 'IRANSans';
+  font-family: 'Vazir';
   src: url('./fonts/Vazirmatn-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -35,12 +35,16 @@
 }
 
 @font-face {
-  font-family: 'IRANSans';
+  font-family: 'Vazir';
   src: url('./fonts/Vazirmatn-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-body{
-  font-family:'IRANSans', serif;
+@font-face {
+  font-family: 'Sahel';
+  src: url('./fonts/Sahel-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

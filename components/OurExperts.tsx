@@ -3,7 +3,7 @@ const OurExperts: React.FC = () => {
       <section className="py-16 bg-primary-300 rounded-3xl">
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 gap-6 items-center">
-            <h2 className="text-xl font-bold leading-tight text-right mb-4 sm:mb-0">
+            <h2 className="text-xl font-sahel font-bold leading-tight text-right mb-4 sm:mb-0">
                با ما در ارتباط باشید
             </h2>
   

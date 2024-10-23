@@ -27,7 +27,7 @@ const BlogSum = () => {
   
     return (
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl text-center font-bold mb-8 text-primary-400">وبلاگ</h1>
+        <h1 className="text-3xl text-center font-bold mb-8 text-tertiary-950 font-sahel">وبلاگ</h1>
         
         {/* Search and Filter */}
         <div className="mb-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
