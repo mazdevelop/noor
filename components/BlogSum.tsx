@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 const BlogSum = () => {
   const [articles] = useState([
-    { id: 1, title: 'مقاله ۱', excerpt: 'خلاصه مقاله ۱...', category: 'مبلمان شهری', image: '/images/IMG_3204.JPG' },
-    { id: 2, title: 'مقاله ۲', excerpt: 'خلاصه مقاله ۲...', category: 'تجهیزات روشنایی - ترافیکی', image: '/images/IMG_3204.JPG' },
-    { id: 3, title: 'مقاله ۳', excerpt: 'خلاصه مقاله ۳...', category: 'مبلمان شهری', image: '/images/IMG_3204.JPG' },    ]);
+    { id: 1, title: 'مقاله ۱', excerpt: 'خلاصه مقاله ۱...', category: 'مبلمان شهری', image: '/images/InShot_20241024_004152296.jpg' },
+    { id: 2, title: 'مقاله ۲', excerpt: 'خلاصه مقاله ۲...', category: 'تجهیزات روشنایی - ترافیکی', image: '/images/InShot_20241024_002736730.jpg' },
+    { id: 3, title: 'مقاله ۳', excerpt: 'خلاصه مقاله ۳...', category: 'مبلمان شهری', image: '/images/InShot_20241024_065031110.jpg' },    ]);
   
     const [filteredArticles, setFilteredArticles] = useState(articles);
     const [activeCategory, setActiveCategory] = useState('همه');
