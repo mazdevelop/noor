@@ -37,7 +37,12 @@ export default function ContactUsPage() {
   };
 
   return (
+    
     <div className="container mx-auto p-4">
+       <div className="mb-16 text-center">
+        <h2 className="text-4xl font-sahel font-bold text-gray-900 mb-4">تماس با ما</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">منتظر انتقادات و پیشنهادات شما هستیم.</p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex items-center justify-center">
         <Image

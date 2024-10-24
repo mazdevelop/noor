@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../../components/Hero';
 import AboutUs from '../../components/Aboutus';
 import Galvanize from '../../components/Galvanize';
-import BlogSum from '../../components/BlogSum';
+import BlogSummary from '../../components/BlogSummary';
 import ProductSum from '../../components/ProductSum';
 import QualityAssurance from '../../components/QualityAssurance';
 const HomePage: React.FC = () => {
@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
       <Galvanize />
       <ProductSum />
       <QualityAssurance/>
-      <BlogSum />
+      <BlogSummary />
     </div>
   );
 };

@@ -1,58 +1,46 @@
-'use client';
-
 import React from 'react';
+import Image from "next/image";
+import { blogs } from '../../data/blogs'; // فایل داده‌ها
 import Link from 'next/link';
-import Image from 'next/image';
 
-const BlogsPage = () => {
-  // نمونه‌ای از داده‌های مربوط به مقالات
-  const blogs = [
-    {
-      slug: 'my-first-blog-post',
-      title: 'مقاله اول',
-      description: 'این مقاله در مورد موضوع اول است.',
-      date: '2024-10-01',
-      likes: 50,
-      views: 120,
-      thumbnail: '/images/IMG_6980.JPG', // آدرس عکس شاخص
-    },
-    {
-      slug: 'my-second-blog-post',
-      title: 'مقاله دوم',
-      description: 'این مقاله در مورد موضوع دوم است.',
-      date: '2024-10-05',
-      likes: 35,
-      views: 90,
-      thumbnail: '/images/IMG_6980.JPG', // آدرس عکس شاخص
-    },
-    // مقالات بیشتر
-  ];
-
+const BlogPage = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-6 text-center">وبلاگ</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold font-sahel mb-8">همه مقالات</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs.map((blog) => (
-          <div key={blog.slug} className="bg-white p-4 rounded-lg shadow-lg">
-            <Link href={`/blog/${blog.slug}`}>
-              <div>
-                {/* نمایش عکس شاخص */}
-                <Image
-                  src={blog.thumbnail}
-                  alt={blog.title}
-                  width={300}
-                  height={200}
-                  className="object-cover rounded-lg mb-4"
-                />
-                <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
-                <p className="text-gray-600 mb-4">{blog.description}</p>
+          <div key={blog.slug} className="bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="relative">
+              <Image 
+                src={blog.thumbnail} 
+                alt={blog.title} 
+                width={400} 
+                height={250}
+                className="w-full h-48 object-cover"
+              />
+              {/* تاریخ روی تصویر */}
+              <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm">
+                {blog.date}
               </div>
-            </Link>
-            <div className="flex justify-between items-center text-sm text-gray-500">
-              <span>{new Date(blog.date).toLocaleDateString('fa-IR')}</span>
-              <div className="flex items-center space-x-4">
-                <span>❤️ {blog.likes} لایک</span>
-                <span>👁️ {blog.views} بازدید</span>
+            </div>
+            
+            <div className="p-5">
+              <div className="flex flex-col h-full">
+                <h2 className="text-lg font-bold mb-2">{blog.title}</h2>
+                <p className="text-gray-600 mb-4 line-clamp-2 text-sm">{blog.description}</p>
+                
+                {/* دکمه در سمت راست */}
+                <div className="flex justify-end mt-auto">
+                  <Link 
+                    href={`/blog/${blog.slug}`}
+                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
+                  >
+                    <span>مشاهده مطلب</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -62,4 +50,5 @@ const BlogsPage = () => {
   );
 };
 
-export default BlogsPage;
+export default BlogPage;
+
