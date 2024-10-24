@@ -120,7 +120,7 @@ const Header: React.FC = () => {
           <li><Link href="/products" className="block text-xl hover:text-primary-300 transition-colors duration-300" onClick={handleLinkClick}>محصولات</Link></li>
           <li><Link href="/blog" className="block text-xl hover:text-primary-300 transition-colors duration-300" onClick={handleLinkClick}>وبلاگ</Link></li>
           <li><Link href="/about" className="block text-xl hover:text-primary-300 transition-colors duration-300" onClick={handleLinkClick}>درباره ما</Link></li>
-          <li><Link href="/contact" className="block text-xl hover:text-primary-300 transition-colors duration-300" onClick={handleLinkClick}>تماس با ما</Link></li>
+          <li><Link href="/contact-us" className="block text-xl hover:text-primary-300 transition-colors duration-300" onClick={handleLinkClick}>تماس با ما</Link></li>
         </ul>
         <div className="mt-8 flex flex-col items-center space-y-4">
           <div className="flex items-center">
