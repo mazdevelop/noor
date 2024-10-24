@@ -6,11 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Hero: React.FC = () => {
   const images = [
-    { src: "/images/IMG_6980.JPG", alt: "Hero Image 2" },
-    { src: "/images/IMG_7214.JPG", alt: "Hero Image 3" },
-    { src: "/images/IMG_3203.JPG", alt: "Hero Image 4" },
-    { src: "/images/IMG_3204.JPG", alt: "Hero Image 5" },
-    { src: "/images/IMG_4277.JPG", alt: "Hero Image 6" },
+    { src: "/images/InShot_20241024_003036344.JPG", alt: "Hero Image 2" },
+    { src: "/images/InShot_20241024_003717802.JPG", alt: "Hero Image 3" },
+    { src: "/images/InShot_20241024_003333488.JPG", alt: "Hero Image 4" },
+    { src: "/images/InShot_20241024_004152296.JPG", alt: "Hero Image 5" },
+    { src: "/images/InShot_20241024_004408391.JPG", alt: "Hero Image 6" },
   ];
 
   const announcements = [

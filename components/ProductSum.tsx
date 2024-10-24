@@ -20,14 +20,15 @@ const categories = [
 ];
 
 const products = [
-  { id: 1, name: 'محصول ۱', image: '/images/IMG_6980.JPG', categoryId: 1 },
-  { id: 2, name: 'محصول ۲', image: '/images/IMG_6980.JPG', categoryId: 1 },
-  { id: 3, name: 'محصول ۳', image: '/images/IMG_6980.JPG', categoryId: 2 },
-  { id: 4, name: 'محصول ۴', image: '/images/IMG_6980.JPG', categoryId: 2 },
-  { id: 5, name: 'محصول ۵', image: '/images/IMG_6980.JPG', categoryId: 3 },
-  { id: 6, name: 'محصول ۶', image: '/images/IMG_6980.JPG', categoryId: 3 },
-  { id: 7, name: 'محصول ۷', image: '/images/IMG_6980.JPG', categoryId: 4 },
-  { id: 8, name: 'محصول ۸', image: '/images/IMG_6980.JPG', categoryId: 4 },
+  { id: 2, image: '/images/InShot_20241024_002206453.jpg', categoryId: 8 },
+  { id: 3, image: '/images/InShot_20241024_002244501.jpg', categoryId: 8 },
+  { id: 4, image: '/images/InShot_20241024_002410291.jpg', categoryId: 2 },
+  { id: 5, image: '/images/InShot_20241024_002531224.jpg', categoryId: 2 },
+  { id: 6, image: '/images/InShot_20241024_002601027.jpg', categoryId: 2 },
+  { id: 7, image: '/images/InShot_20241024_002736730.jpg', categoryId: 1 },
+  { id: 8, image: '/images/InShot_20241024_002821082.jpg', categoryId: 1 },
+  { id: 9, image: '/images/InShot_20241024_002851041.jpg', categoryId: 2 },
+  { id: 10, image: '/images/InShot_20241024_002929933.jpg', categoryId: 3 },
 ];
 
 const ProductSlider = () => {
@@ -115,14 +116,13 @@ const ProductSlider = () => {
                 <div className="relative">
                   <Image 
                     src={product.image} 
-                    alt={product.name} 
+                    alt='محصول' 
                     width={300} 
                     height={200} 
                     className="w-full h-48 object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-bold text-right">{product.name}</h3>
                   <p className="text-gray-600 text-sm text-right">
                     {categories.find(cat => cat.id === product.categoryId)?.name}
                   </p>

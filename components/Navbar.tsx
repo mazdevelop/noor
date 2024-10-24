@@ -76,17 +76,17 @@ const Header: React.FC = () => {
       <div className="bg-secondary-200 shadow-md">
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex items-center space-x-4 mb-4 sm:mb-0">
-            <div className="flex flex-col items-start">
-              <h1 className="text-2xl font-bold font-sahel text-tertiary-950">غزال نور</h1>
-              <span className="text-xl text-tertiary-950 mt-1 font-sahel mr-28">پارسا</span>
-            </div>
+          <Link href="/" className="flex flex-col items-start">
+            <h1 className="text-2xl font-bold font-sahel text-tertiary-950">غزال نور</h1>
+            <span className="text-xl text-tertiary-950 mt-1 font-sahel mr-28">پارسا</span>
+          </Link>
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
             <div className="flex items-center ml-2">
-              <i className="ri-customer-service-line mr-2 text-sm text-tertiary-950"></i>
+              <i className="ri-customer-service-line mx-1 text-sm text-tertiary-950"></i>
               <span className="text-sm font-medium">۰۹۱۲۵۰۰۰۹۷۹</span>
             </div>
-            <Link href="/account" className="w-full sm:w-auto border-2 border-primary-300 bg-transparent text-tertiary-900 px-6 py-2 rounded-full hover:bg-secondary-900 hover:text-primary-300 transition-colors duration-300 text-center font-medium">
+            <Link href="/" className="w-full sm:w-auto border-2 border-primary-300 bg-transparent text-tertiary-900 px-6 py-2 rounded-full hover:bg-secondary-900 hover:text-primary-300 transition-colors duration-300 text-center font-medium">
               حساب کاربری
             </Link>
           </div>
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
         </ul>
         <div className="mt-8 flex flex-col items-center space-y-4">
           <div className="flex items-center">
-            <i className="ri-customer-service-line mr-2 text-sm text-tertiary-950"></i>
+            <i className="ri-customer-service-line mx-1 text-sm text-tertiary-950"></i>
             <span className="text-sm font-medium">09123456789</span>
           </div>
           <Link href="/account" className="border-2 border-primary-300 bg-transparent text-tertiary-900 px-6 py-2 rounded-full hover:bg-secondary-900 hover:text-primary-300 transition-colors duration-300 text-center font-medium" onClick={handleLinkClick}>

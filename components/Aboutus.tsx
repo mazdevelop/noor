@@ -1,20 +1,25 @@
 import React from 'react';
 import Image from "next/image";
-
+const previewProducts = [
+  { id: 1, image: '/images/InShot_20241024_003901215.jpg' },
+  { id: 2, image: '/images/InShot_20241024_004536865.jpg' },
+  { id: 3, image: '/images/InShot_20241024_002244501.jpg' },
+  { id: 4, image: '/images/InShot_20241024_002410291.jpg' }
+];
 const AboutUs: React.FC = () => {
   return (
     <div className="bg-secondary-200 p-4 md:p-8">
       <div className="flex flex-col md:flex-row">
         {/* Images Section */}
         <div className="w-full md:w-1/3 grid grid-cols-2 gap-2 md:gap-4">
-          {[1, 2, 3, 4].map((num) => (
-            <div key={num} className="rounded-lg overflow-hidden">
+          {previewProducts.map((product) => (
+            <div key={product.id} className="rounded-lg overflow-hidden">
               <Image
-                src="/images/IMG_7614.JPG"
+                src={product.image}
                 width={100}
                 height={100}
-                alt={`Image ${num}`}
-                className="object-cover w-40 h-30 rounded-md"
+                alt={`Image ${product.id}`}
+                className="object-cover w-52 h-52 rounded-md"
               />
             </div>
           ))}
