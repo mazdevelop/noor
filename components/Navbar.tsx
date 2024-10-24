@@ -44,30 +44,34 @@ const Header: React.FC = () => {
   return (
     <header ref={headerRef} className="bg-primary-200 text-secondary-950 font-vazir">
       <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row justify-between items-center">
-        <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+        <div className="flex items-center gap-6 mb-2 sm:mb-0">
           <span className="text-sm font-medium">با ما در ارتباط باشید</span>
-          <div className="flex space-x-4 ml-2">
-            <Link href="https://facebook.com" passHref>
-              <i className="ri-facebook-fill hover:text-primary-300 transition-colors duration-300 cursor-pointer text-lg"></i>
+          <div className="flex gap-4">
+            <Link href="https://www.instagram.com/ghazalnooreparsa?igsh=OXcyeWw3dDF5amxu" passHref>
+              <i className="ri-instagram-fill hover:text-primary-300 transition-colors duration-300 cursor-pointer text-lg"></i>
             </Link>
-            <Link href="https://twitter.com" passHref>
-              <i className="ri-twitter-fill hover:text-primary-300 transition-colors duration-300 cursor-pointer text-lg"></i>
-            </Link>
-            <Link href="https://youtube.com" passHref>
-              <i className="ri-youtube-fill hover:text-primary-300 transition-colors duration-300 cursor-pointer text-lg"></i>
-            </Link>
-            <Link href="https://whatsapp.com" passHref>
-              <i className="ri-whatsapp-fill hover:text-primary-300 transition-colors duration-300 cursor-pointer text-lg"></i>
+            <Link href="https://t.me/+3zTjofnPMEZkYThk" passHref>
+              <i className="ri-telegram-fill hover:text-primary-300 transition-colors duration-300 cursor-pointer text-lg"></i>
             </Link>
           </div>
         </div>
         <nav className="hidden sm:block">
-          <ul className="flex space-x-6 text-sm font-medium">
-            <li><Link href="/" className="hover:text-primary-300 transition-colors duration-300 ml-1">خانه</Link></li>
-            <li><Link href="/products" className="hover:text-primary-300 transition-colors duration-300">محصولات</Link></li>
-            <li><Link href="/blog" className="hover:text-primary-300 transition-colors duration-300">وبلاگ</Link></li>
-            <li><Link href="/about" className="hover:text-primary-300 transition-colors duration-300">درباره ما</Link></li>
-            <li><Link href="/contact-us" className="hover:text-primary-300 transition-colors duration-300">تماس با ما</Link></li>
+          <ul className="flex items-center gap-8 text-sm font-medium">
+            <li>
+              <Link href="/" className="hover:text-primary-300 transition-colors duration-300">خانه</Link>
+            </li>
+            <li>
+              <Link href="/products" className="hover:text-primary-300 transition-colors duration-300">محصولات</Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-primary-300 transition-colors duration-300">وبلاگ</Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-primary-300 transition-colors duration-300">درباره ما</Link>
+            </li>
+            <li>
+              <Link href="/contact-us" className="hover:text-primary-300 transition-colors duration-300">تماس با ما</Link>
+            </li>
           </ul>
         </nav>
       </div>

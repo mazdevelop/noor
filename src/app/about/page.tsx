@@ -1,51 +1,62 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="bg-tertiary-200 rounded-md p-4 md:p-6">
-      <div className="container mx-auto">
-        {/* عنوان صفحه */}
-        <h1 className="text-xl font-semibold text-center mb-6 md:mb-8">تماس با ما</h1>
+    <div className="bg-primary-50/30 min-h-screen py-8">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <h1 className="font-sahel text-2xl text-tertiary-900 text-center mb-8">
+          تماس با ما
+        </h1>
 
-        {/* بخش اطلاعات تماس و نقشه */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* اطلاعات تماس */}
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold mb-4">اطلاعات تماس</h2>
-            <p className="text-base md:text-lg mb-4">برای هرگونه سوال یا درخواست می‌توانید از طریق اطلاعات زیر با ما تماس بگیرید:</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <h2 className="font-sahel text-xl text-tertiary-800 mb-6">راه‌های ارتباطی</h2>
             
-            <ul className="mb-4">
-              <li className="mb-2">
-                <span className="font-semibold">آدرس:</span>تهران، کهریزک، جاده واوان، میدان عشقی ، خیابان یادگار امام ، پلاک ۲۴
-              </li>
-              <li className="mb-2">
-                <span className="font-semibold">ایمیل:</span> example@example.com
-              </li>
-              <li className="mb-2">
-                <span className="font-semibold">تلفن:</span> ۰۹۱۲۵۰۰۰۹۷۹
-              </li>
-            </ul>
+            <div className="space-y-4 text-secondary-700">
+              <p className="flex items-start gap-2">
+                <span className="font-medium min-w-20">آدرس:</span>
+                <span>تهران، کهریزک، جاده واوان، میدان عشقی، خیابان یادگار امام، پلاک ۲۴</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-medium min-w-20">ایمیل:</span>
+                <span>example@example.com</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-medium min-w-20">تلفن:</span>
+                <span className="dir-ltr">۰۹۱۲۵۰۰۰۹۷۹</span>
+              </p>
+            </div>
 
-            {/* دکمه‌های شبکه اجتماعی */}
-            <div className="flex space-x-4">
-              <a href="#" className="bg-blue-500 text-white p-2 rounded-full text-sm md:text-base">فیسبوک</a>
-              <a href="#" className="bg-blue-400 text-white p-2 rounded-full text-sm md:text-base">توییتر</a>
-              <a href="#" className="bg-red-500 text-white p-2 rounded-full text-sm md:text-base">یوتیوب</a>
+            {/* شبکه‌های اجتماعی */}
+            <div className="flex gap-3 mt-6">
+              <a href="#" className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm transition">اینستاگرام</a>
+              <a href="#" className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm transition">تلگرام</a>
             </div>
           </div>
 
           {/* نقشه */}
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold mb-4">موقعیت جغرافیایی:</h2>
-            <div className="aspect-w-16 aspect-h-9">
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <h2 className="font-sahel text-xl text-tertiary-800 mb-6">موقعیت مکانی</h2>
+            <div 
+              className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1605618398935!2d-122.41941528469263!3d37.774929279759154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064ec0d678d%3A0x3bafc1a5ae75b1b0!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2s!4v1625027466216!5m2!1sen!2s"
+                src="https://maps.google.com/maps?q=35.502402,51.320481&ll=35.502402,51.320481&z=16&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{
+                  border: 0,
+                  filter: `grayscale(${isHovered ? '0' : '100%'})`,
+                  transition: 'filter 0.5s ease-in-out'
+                }}
+                className="w-full h-full"
                 allowFullScreen={false}
                 loading="lazy"
               ></iframe>
