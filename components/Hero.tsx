@@ -3,6 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Announcements from "./Announcements";
 
 const Hero: React.FC = () => {
   const images = [
@@ -11,12 +12,6 @@ const Hero: React.FC = () => {
     { src: "/images/InShot_20241024_003333488.jpg", alt: "Hero Image 4" },
     { src: "/images/InShot_20241024_004152296.jpg", alt: "Hero Image 5" },
     { src: "/images/InShot_20241024_004408391.jpg", alt: "Hero Image 6" },
-  ];
-
-  const announcements = [
-    "🏭 از کارخانه ما بازدید کنید - درهای ما همیشه به روی شما باز است",
-    "✨ بدون نیاز به هماهنگی قبلی از خط تولید ما دیدن کنید",
-    "🤝 ما مشتاقانه منتظر دیدار شما هستیم",
   ];
 
   const sliderSettings = {
@@ -43,18 +38,6 @@ const Hero: React.FC = () => {
     ],
   };
 
-  const announcementSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-  };
-
   return (
     <>
       <section className="bg-secondary-200 rounded-t-md h-fit py-28 flex flex-col gap-32 font-vazir">
@@ -62,7 +45,7 @@ const Hero: React.FC = () => {
           <div className="grid sm:grid-cols-2 grid-cols-1">
             <div>
               <h1 className="text-tertiary-950 text-2xl leading-normal font-sahel">
-                ما در غزال نور پارسا چه کار می‌کنیم؟
+              غزال نور پارسا تولید کننده انواع مبلمان شهری
               </h1>
             </div>
             <div className="flex mt-6 sm:mt-0 flex-col justify-between gap-6 sm:gap-0">
@@ -72,18 +55,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="bg-primary-300 rounded-md text-white py-3 overflow-hidden">
-          <div className="container mx-auto">
-            <Slider {...announcementSettings}>
-              {announcements.map((text, index) => (
-                <div key={index} className="text-center flex items-center justify-center px-4">
-                  <i className="ri-door-open-line ml-2 text-lg"></i>
-                  <span className="text-base font-medium">{text}</span>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
+        <Announcements />
         <div className="w-full">
           <Slider {...sliderSettings}>
             {images.map((image, index) => (
@@ -100,7 +72,6 @@ const Hero: React.FC = () => {
             ))}
           </Slider>
         </div>
-        
       </section>
     </>
   );

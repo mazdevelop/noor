@@ -41,7 +41,7 @@ const Preloader = (): JSX.Element => {
     >
       <div ref={textRef} className="text-center">
         <h1 className="text-white font-sahel text-4xl mb-2">غزال نور <span className='text-2xl'>پارسا</span></h1>
-        <p className="text-primary-300 text-lg">به دنیای ما خوش آمدید</p>
+        <p className="text-primary-300 text-lg">به دنیای مبلمان شهری خوش امدید</p>
       </div>
       
       <div className="w-64 h-[2px] bg-primary-700 mt-8 overflow-hidden">

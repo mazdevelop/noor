@@ -24,7 +24,7 @@ const Contact = () => {
               </p>
               <p className="flex items-center gap-2">
                 <span className="font-medium min-w-20">ایمیل:</span>
-                <span>example@example.com</span>
+                <span>ghazalnooreparsa@gmail.com</span>
               </p>
               <p className="flex items-center gap-2">
                 <span className="font-medium min-w-20">تلفن:</span>

@@ -5,14 +5,16 @@ import Galvanize from '../../components/Galvanize';
 import BlogSummary from '../../components/BlogSummary';
 import ProductSum from '../../components/ProductSum';
 import QualityAssurance from '../../components/QualityAssurance';
+import Announcements from '../../components/Announcements';
 const HomePage: React.FC = () => {
   return (
     <div>
-      <Hero />
+      <ProductSum />
+      <Announcements />
+      <QualityAssurance/>
       <AboutUs/>
       <Galvanize />
-      <ProductSum />
-      <QualityAssurance/>
+      <Hero />
       <BlogSummary />
     </div>
   );
