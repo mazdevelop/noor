@@ -3,7 +3,6 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Announcements from "./Announcements";
 
 const Hero: React.FC = () => {
   const images = [
@@ -55,7 +54,6 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-        <Announcements />
         <div className="w-full">
           <Slider {...sliderSettings}>
             {images.map((image, index) => (

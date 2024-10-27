@@ -18,6 +18,9 @@ const config: Config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'header-pattern': "url('/images/20241026020633.webp')", // مسیر تصویر خود را قرار دهید
+      },
       gridTemplateColumns: {},
       fontFamily: {
         vazir: ["Vazir", "sans-serif"],

@@ -3,18 +3,18 @@ import Hero from '../../components/Hero';
 import AboutUs from '../../components/Aboutus';
 import Galvanize from '../../components/Galvanize';
 import BlogSummary from '../../components/BlogSummary';
-import ProductSum from '../../components/ProductSum';
+import ProductShowcase from '../../components/ProductShowcase';
 import QualityAssurance from '../../components/QualityAssurance';
 import Announcements from '../../components/Announcements';
 const HomePage: React.FC = () => {
   return (
     <div>
-      <ProductSum />
+      <ProductShowcase />
       <Announcements />
-      <QualityAssurance/>
       <AboutUs/>
-      <Galvanize />
+      <QualityAssurance/>
       <Hero />
+      <Galvanize />
       <BlogSummary />
     </div>
   );
