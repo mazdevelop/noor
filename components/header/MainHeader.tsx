@@ -1,4 +1,3 @@
-// MainHeader.tsx
 import { FC, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { BrandLogo } from './BrandLogo';
@@ -11,6 +10,17 @@ export const MainHeader: FC = () => {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // ابتدا همه المان‌ها را مخفی می‌کنیم
+    gsap.set([titleRef.current, subtitleRef.current, phoneRef.current], {
+      opacity: 0,
+      y: 50
+    });
+    
+    // اورلی را کاملاً تیره می‌کنیم
+    gsap.set(overlayRef.current, {
+      opacity: 0.4
+    });
+
     const mainTimeline = gsap.timeline({
       defaults: { 
         ease: "power3.out",
@@ -19,21 +29,20 @@ export const MainHeader: FC = () => {
     });
 
     mainTimeline
-      .from(overlayRef.current, {
+      .to(titleRef.current, {
+        y: 0,
         opacity: 1,
-        duration: 1.5
+        duration: 1
       })
-      .from(titleRef.current, {
-        y: 50,
+      .to(subtitleRef.current, {
+        y: 0,
         opacity: 1,
-      }, "-=0.8")
-      .from(subtitleRef.current, {
-        y: 30,
-        opacity: 1,
+        duration: 1
       }, "-=0.6")
-      .from(phoneRef.current, {
-        y: 20,
+      .to(phoneRef.current, {
+        y: 0,
         opacity: 1,
+        duration: 1
       }, "-=0.4");
 
   }, []);
@@ -45,14 +54,14 @@ export const MainHeader: FC = () => {
         className="absolute inset-0 bg-header-pattern bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundSize: 'cover',
-          transform: 'scale(1.02)', // Prevents white edges during zoom
+          transform: 'scale(1.02)',
         }}
       />
       
-      {/* Overlay that fades out */}
+      {/* Overlay */}
       <div 
         ref={overlayRef}
-        className="absolute inset-0 bg-black/40"
+        className="absolute inset-0 bg-black"
       />
 
       {/* Content */}
@@ -65,5 +74,3 @@ export const MainHeader: FC = () => {
     </div>
   );
 };
-
-
