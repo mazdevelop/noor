@@ -21,7 +21,7 @@ const categories: Category[] = [
 ];
 
 const products: Product[] = [
-  { id: 2, image: '/images/InShot_20241024_002821082.jpg', categoryId: 1 },
+  { id: 2, image: '/images/photo_2024-10-27_02-04-42.jpg', categoryId: 1 },
   { id: 3, image: '/images/InShot_20241024_005656654.jpg', categoryId: 3 },
   { id: 4, image: '/images/InShot_20241024_002851041.jpg', categoryId: 2 },
   { id: 5, image: '/images/photo_2024-10-23_12-12-49.jpg', categoryId: 4 },
