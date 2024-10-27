@@ -6,7 +6,7 @@ import { CategoryButtonProps } from './types';
 const CategoryButton: React.FC<CategoryButtonProps> = ({ category, isSelected, onClick }) => (
     <button
       onClick={onClick}
-      className={`w-32 h-20 flex items-center justify-center rounded-lg transition-colors border ${
+      className={`w-20 h-16 md:w-32 md:h-20 flex items-center justify-center rounded-lg transition-colors border ${
         isSelected ? 'bg-primary-300 text-secondary-900 border-secondary-900' : 'bg-white text-gray-600 border-gray-200'
       } hover:bg-primary-100`}
     >

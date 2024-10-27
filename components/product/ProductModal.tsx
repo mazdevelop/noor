@@ -53,9 +53,10 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, selectedPr
                 e.stopPropagation();
                 onPrevious();
               }}
-              className="p-3 bg-gray-100/90 hover:bg-gray-200 rounded-full shadow-lg text-gray-600 transition-colors pointer-events-auto"
+              className="p-3  bg-gray-100/90 hover:bg-gray-200 rounded-full shadow-lg text-gray-600 transition-colors pointer-events-auto"
             >
-              <i className="ri-arrow-left-s-line text-2xl"></i>
+              <i className="ri-arrow-right-s-line text-2xl"></i>
+              
             </button>
             <button
               onClick={(e) => {
@@ -64,7 +65,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, selectedPr
               }}
               className="p-3 bg-gray-100/90 hover:bg-gray-200 rounded-full shadow-lg text-gray-600 transition-colors pointer-events-auto"
             >
-              <i className="ri-arrow-right-s-line text-2xl"></i>
+              <i className="ri-arrow-left-s-line text-2xl"></i>
             </button>
           </div>
         </div>
