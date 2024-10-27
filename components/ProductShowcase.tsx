@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import CategoryButton from './product/CategoryButton';
 import ProductCard from './product/ProductCard';
 import ProductModal from './product/ProductModal';
@@ -37,7 +37,6 @@ const ProductShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const filteredProducts = useMemo(() => {
     return selectedCategory === null
@@ -72,16 +71,6 @@ const ProductShowcase: React.FC = () => {
     }),
     [filteredProducts.length]
   );
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
