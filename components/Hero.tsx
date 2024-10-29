@@ -3,6 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
   const images = [
@@ -69,6 +70,17 @@ const Hero: React.FC = () => {
               </div>
             ))}
           </Slider>
+        </div>
+        
+        {/* دکمه با Remix Icon */}
+        <div className="flex justify-center mt-12">
+          <Link 
+            href="/products" 
+            className="group flex items-center gap-2 bg-primary-200 text-tertiary-950 hover:bg-tertiary-800 hover:text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+          >
+            <span className="text-lg">مشاهده محصولات بیشتر</span>
+            <i className="ri-arrow-right-line text-xl transform transition-transform duration-300 group-hover:translate-x-2 rtl:rotate-180"></i>
+          </Link>
         </div>
       </section>
     </>
