@@ -62,7 +62,7 @@ const ProductsPage: React.FC = () => {
                 ${currentCategory.id === category.id ? 'bg-primary-100 shadow-md' : 'bg-gray-50'}`}
             >
               {category.icon && (
-                <div className="w-10 h-10 relative mr-2 ">
+                <div className={` relative  ${window.innerWidth <= 390 ? 'mr-0 w-5 h-5' : 'mr-2 w-8 h-8'}`}>
                   <Image 
                     src={category.icon} 
                     alt={category.name} 
@@ -71,7 +71,7 @@ const ProductsPage: React.FC = () => {
                   />
                 </div>
               )}
-              <span className="text-xs md:text-sm font-medium text-gray-700 mr-2 truncate">
+              <span className={`font-medium text-gray-700 mr-2 truncate ${window.innerWidth <= 390 ? 'text-xs' : 'text-sm'}`}>
                 {category.name}
               </span>
             </button>
