@@ -4,7 +4,10 @@ import AboutUs from '../../components/Aboutus';
 import Galvanize from '../../components/Galvanize';
 import BlogSummary from '../../components/BlogSummary';
 import QualityAssurance from '../../components/QualityAssurance';
+import ElectrostaticCoating from '../../components/ElectrostaticCoating';
 import Announcements from '../../components/Announcements';
+
+
 const HomePage: React.FC = () => {
   return (
     <div>
@@ -12,6 +15,7 @@ const HomePage: React.FC = () => {
       <Announcements />
       <QualityAssurance/>
       <AboutUs/>
+      <ElectrostaticCoating/>
       <Galvanize />
       <BlogSummary />
     </div>
