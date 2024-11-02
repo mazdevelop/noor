@@ -82,5 +82,9 @@ export const products: Product[] = [
     { id: 80, image: '/images/photo_2024-10-27_02-06-28.jpg', categoryId: 1 },
     { id: 81, image: '/images/photo_2024-10-27_02-06-39.jpg', categoryId: 3 },
     { id: 82, image: '/images/photo_2024-11-02_02-45-13.jpg', categoryId: 9 },
+    { id: 83, image: '/images/photo_2024-11-02_08-17-08.jpg', categoryId: 1 },
+    { id: 84, image: '/images/photo_2024-11-02_08-17-21.jpg', categoryId: 1 },
+    { id: 85, image: '/images/photo_2024-11-02_08-17-29.jpg', categoryId: 1 },
+    { id: 86, image: '/images/photo_2024-11-02_08-17-52.jpg', categoryId: 1 },
   ];
   

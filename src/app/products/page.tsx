@@ -58,8 +58,8 @@ const ProductsPage: React.FC = () => {
                 setCurrentCategory(category);
                 setCurrentPage(1);
               }}
-              className={`flex items-center justify-start p-3 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105 
-                ${currentCategory.id === category.id ? 'bg-blue-100 shadow-md' : 'bg-gray-50'}`}
+              className={`flex items-center justify-start p-3 rounded-lg transition-all duration-300 hover:bg-primary-50 hover:scale-105 
+                ${currentCategory.id === category.id ? 'bg-primary-100 shadow-md' : 'bg-gray-50'}`}
             >
               {category.icon && (
                 <div className="w-10 h-10 relative mr-2">
@@ -130,7 +130,7 @@ const ProductsPage: React.FC = () => {
                 onClick={() => typeof page === 'number' && setCurrentPage(page)}
                 className={`px-3 py-1 rounded-lg ${
                   currentPage === page 
-                    ? 'bg-blue-500 text-white' 
+                    ? 'bg-primary-500 text-white' 
                     : typeof page === 'number'
                     ? 'bg-gray-100 hover:bg-gray-200'
                     : 'bg-transparent cursor-default'
