@@ -1,5 +1,5 @@
 declare module 'react-slick' {
-  import { Component } from 'react';
+  import { Component, ReactNode } from 'react';
 
   export interface CustomArrowProps {
     className?: string;
@@ -18,8 +18,12 @@ declare module 'react-slick' {
     autoplay?: boolean;
     autoplaySpeed?: number;
     arrows?: boolean;
+    vertical?: boolean;
     centerMode?: boolean;
     centerPadding?: string;
+    pauseOnHover?: boolean;
+    rtl?: boolean;
+    cssEase?: string;
     className?: string;
     lazyLoad?: 'ondemand' | 'progressive';
     responsive?: Array<{
@@ -28,6 +32,7 @@ declare module 'react-slick' {
     }>;
     nextArrow?: React.ReactElement<CustomArrowProps>;
     prevArrow?: React.ReactElement<CustomArrowProps>;
+    children?: ReactNode;  // Add children prop here
   }
 
   export default class Slider extends Component<Settings> {}
