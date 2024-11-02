@@ -116,25 +116,29 @@ const ProductsPage: React.FC = () => {
       {totalPages > 1 && (
         <div className="flex flex-wrap justify-center items-center gap-2 mt-8">
           <button
-            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
-            className="flex items-center px-3 py-2 rounded-lg bg-gray-100 disabled:bg-gray-50 disabled:text-gray-400 hover:bg-gray-200"
+            className={`flex items-center px-2 py-1 rounded-lg bg-gray-100 disabled:bg-gray-50 disabled:text-gray-400 hover:bg-gray-200 ${
+              currentPage === 1
+                ? 'sm:px-3 sm:py-2'
+                : 'sm:px-3 sm:py-2'
+            }`}
           >
             <i className="ri-arrow-right-s-line text-lg"></i>
           </button>
-          
+
           <div className="flex flex-wrap justify-center gap-1">
             {generatePaginationNumbers(currentPage, totalPages).map((page, index) => (
               <button
                 key={index}
                 onClick={() => typeof page === 'number' && setCurrentPage(page)}
-                className={`px-3 py-1 rounded-lg ${
-                  currentPage === page 
-                    ? 'bg-primary-500 text-white' 
+                className={`px-2 py-1 rounded-lg min-w-[2.25rem] text-center ${
+                  currentPage === page
+                    ? 'bg-primary-500 text-white'
                     : typeof page === 'number'
                     ? 'bg-gray-100 hover:bg-gray-200'
                     : 'bg-transparent cursor-default'
-                } min-w-[2.5rem] text-center`}
+                } sm:px-3 sm:py-1 sm:min-w-[2.5rem]`}
               >
                 {page}
               </button>
@@ -142,9 +146,13 @@ const ProductsPage: React.FC = () => {
           </div>
 
           <button
-            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className="flex items-center px-3 py-2 rounded-lg bg-gray-100 disabled:bg-gray-50 disabled:text-gray-400 hover:bg-gray-200"
+            className={`flex items-center px-2 py-1 rounded-lg bg-gray-100 disabled:bg-gray-50 disabled:text-gray-400 hover:bg-gray-200 ${
+              currentPage === totalPages
+                ? 'sm:px-3 sm:py-2'
+                : 'sm:px-3 sm:py-2'
+            }`}
           >
             <i className="ri-arrow-left-s-line text-lg"></i>
           </button>

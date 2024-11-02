@@ -10,7 +10,11 @@ const Header = () => {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   const toggleLanguage = () => {
@@ -26,7 +30,7 @@ const Header = () => {
     if (isMenuOpen && menu) {
       gsap.to(menu, {
         x: 0,
-        duration: 0.5,
+        duration: 0.7,
         ease: 'power3.out'
       });
 
@@ -39,7 +43,7 @@ const Header = () => {
           {
             x: 0,
             opacity: 1,
-            duration: 0.4,
+            duration: 0.5,
             stagger: 0.1,
             ease: 'power2.out',
             delay: 0.2
@@ -56,7 +60,7 @@ const Header = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.4,
+            duration: 0.5,
             stagger: 0.1,
             ease: 'power2.out',
             delay: 0.6
@@ -67,7 +71,7 @@ const Header = () => {
       if (overlay) {
         gsap.to(overlay, {
           opacity: 1,
-          duration: 0.3,
+          duration: 0.4,
           display: 'block'
         });
       }
@@ -75,13 +79,13 @@ const Header = () => {
     } else if (menu && overlay) {
       gsap.to(menu, {
         x: '100%',
-        duration: 0.5,
+        duration: 0.7,
         ease: 'power3.inOut'
       });
 
       gsap.to(overlay, {
         opacity: 0,
-        duration: 0.3,
+        duration: 0.4,
         display: 'none'
       });
     }
@@ -92,14 +96,14 @@ const Header = () => {
       <div 
         ref={overlayRef}
         className="fixed inset-0 bg-black/50 z-40 hidden"
-        onClick={() => setMenuOpen(false)}
+        onClick={closeMenu}
       />
 
       <header className="fixed top-0 right-0 w-full flex items-center justify-center px-4 py-3 bg-secondary-200 shadow-md z-50">
         <div className="flex items-center justify-center w-full max-w-6xl">
           <div className="flex items-center space-x-4">
             <button onClick={toggleMenu} className="text-gray-700 focus:outline-none hover:bg-secondary-300 p-2 rounded-full transition-all">
-              <i className={`ri-${isMenuOpen ? 'close' : 'menu-3'}-fill text-xl`} />
+              <i className={`ri-menu-3-fill text-xl`} />
             </button>
             
             <Link href="/" className="flex flex-col items-center tracking-widest">
@@ -126,7 +130,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-200">
           <button 
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             className="text-gray-700 focus:outline-none hover:bg-secondary-300 p-2 rounded-full transition-all"
           >
             <i className="ri-close-line text-xl" />
@@ -135,31 +139,31 @@ const Header = () => {
 
         <ul ref={menuItemsRef} className="mt-8 space-y-2 text-base">
           <li className="opacity-0">
-            <Link href="/" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all">
+            <Link href="/" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all" onClick={closeMenu}>
               <i className="ri-home-line ml-3 text-lg" /> 
               <span>{language === 'fa' ? 'صفحه اصلی' : 'Home'}</span>
             </Link>
           </li>
           <li className="opacity-0">
-            <Link href="/products" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all">
+            <Link href="/products" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all" onClick={closeMenu}>
               <i className="ri-shopping-bag-line ml-3 text-lg" /> 
               <span>{language === 'fa' ? 'محصولات' : 'Products'}</span>
             </Link>
           </li>
           <li className="opacity-0">
-            <Link href="/blog" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all">
+            <Link href="/blog" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all" onClick={closeMenu}>
               <i className="ri-article-line ml-3 text-lg" /> 
               <span>{language === 'fa' ? 'بلاگ' : 'Blog'}</span>
             </Link>
           </li>
           <li className="opacity-0">
-            <Link href="/about" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all">
+            <Link href="/about" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all" onClick={closeMenu}>
               <i className="ri-information-line ml-3 text-lg" /> 
               <span>{language === 'fa' ? 'درباره ما' : 'About Us'}</span>
             </Link>
           </li>
           <li className="opacity-0">
-            <Link href="/contact-us" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all">
+            <Link href="/contact-us" className="flex items-center px-6 py-3 hover:bg-secondary-300 transition-all" onClick={closeMenu}>
               <i className="ri-mail-line ml-3 text-lg" /> 
               <span>{language === 'fa' ? 'تماس با ما' : 'Contact Us'}</span>
             </Link>
