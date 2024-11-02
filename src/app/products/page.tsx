@@ -174,7 +174,7 @@ const allProducts: Product[] = [
   { id: 69, image: '/images/photo_2024-10-27_02-04-25.jpg', categoryId: 1 },
   { id: 70, image: '/images/photo_2024-10-27_02-04-42.jpg', categoryId: 1 },
   { id: 71, image: '/images/photo_2024-10-27_02-04-46.jpg', categoryId: 1 },
-  { id: 72, image: '/images/photo_2024-10-27_02-42-57.jpg', categoryId: 1 },
+  { id: 72, image: '/images/photo_2024-10-27_02-42-57.jpg', categoryId: 8 },
   { id: 73, image: '/images/photo_2024-10-27_02-04-58.jpg', categoryId: 8 },
   { id: 74, image: '/images/photo_2024-10-27_02-05-18.jpg', categoryId: 8 },
   { id: 75, image: '/images/photo_2024-10-27_02-05-41.jpg', categoryId: 8 },
@@ -184,6 +184,7 @@ const allProducts: Product[] = [
   { id: 79, image: '/images/photo_2024-10-27_02-06-21.jpg', categoryId: 2 },
   { id: 80, image: '/images/photo_2024-10-27_02-06-28.jpg', categoryId: 1 },
   { id: 81, image: '/images/photo_2024-10-27_02-06-39.jpg', categoryId: 3 },
+  { id: 82, image: '/images/photo_2024-11-02_02-45-13.jpg', categoryId: 9 },
 ];
 
 

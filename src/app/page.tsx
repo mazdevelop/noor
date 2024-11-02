@@ -8,8 +8,8 @@ import Announcements from '../../components/Announcements';
 const HomePage: React.FC = () => {
   return (
     <div>
-      <Announcements />
       <Hero />
+      <Announcements />
       <QualityAssurance/>
       <AboutUs/>
       <Galvanize />

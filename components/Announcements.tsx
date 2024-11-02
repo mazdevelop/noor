@@ -24,17 +24,14 @@ const Announcements: React.FC = () => {
   const announcements = [
     {
       id: 1,
-      icon: "ri-door-open-line",
       text: "از کارخانه ما بازدید کنید - درهای ما همیشه به روی شما باز است"
     },
     {
       id: 2,
-      icon: "ri-calendar-check-line",
       text: "بدون نیاز به هماهنگی قبلی از خط تولید ما دیدن کنید"
     },
     {
       id: 3,
-      icon: "ri-user-smile-line",
       text: "ما مشتاقانه منتظر دیدار شما هستیم"
     }
   ];
@@ -58,12 +55,11 @@ const Announcements: React.FC = () => {
     <div className="bg-primary-300 rounded-lg shadow-md text-secondary-700 py-3 overflow-hidden">
       <div className="container mx-auto px-4">
         <Slider {...announcementSettings}>
-          {announcements.map(({ id, icon, text }) => (
+          {announcements.map(({ id, text }) => (
             <div 
               key={id} 
               className="text-center flex items-center justify-center px-2 py-1 transition-all duration-300 hover:bg-primary-400 rounded-md"
             >
-              <i className={`${icon} ml-3 text-xl text-secondary-600`}></i>
               <span className="font-sahel text-sm md:text-lg leading-relaxed">
                 {text}
               </span>
