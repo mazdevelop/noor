@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from "next/image";
 const previewProducts = [
-  { id: 1, image: '/images/InShot_20241024_003901215.jpg' },
-  { id: 2, image: '/images/InShot_20241024_004536865.jpg' },
-  { id: 3, image: '/images/InShot_20241024_002244501.jpg' },
-  { id: 4, image: '/images/InShot_20241024_002410291.jpg' }
+  { id: 1, image: '/images/InShot_20241024_065407284.jpg' },
+  { id: 2, image: '/images/InShot_20241024_004801107.jpg' },
+  { id: 3, image: '/images/photo_2024-10-24_02-52-56.jpg' },
+  { id: 4, image: '/images/InShot_20241024_004408391.jpg' }
 ];
 const AboutUs: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const AboutUs: React.FC = () => {
                 width={100}
                 height={100}
                 alt={`Image ${product.id}`}
-                className="object-cover w-52 h-52 rounded-md"
+                className="object-contain w-52 h-52 rounded-md"
               />
             </div>
           ))}

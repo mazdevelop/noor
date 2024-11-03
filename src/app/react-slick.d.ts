@@ -26,6 +26,9 @@ declare module 'react-slick' {
     cssEase?: string;
     className?: string;
     lazyLoad?: 'ondemand' | 'progressive';
+    swipeToSlide?:boolean;
+    appendDots?: (dots: ReactNode) => ReactNode;
+    customPaging?: (i: number) => ReactNode;
     responsive?: Array<{
       breakpoint: number;
       settings: Settings | 'unslick';

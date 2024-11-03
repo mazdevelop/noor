@@ -8,13 +8,38 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Settings } from "react-slick";
+import 'remixicon/fonts/remixicon.css';
 
 gsap.registerPlugin(ScrollTrigger);
+
+interface CustomArrowProps {
+  onClick?: () => void;
+  style?: React.CSSProperties;
+}
+
+const NextArrow = ({ onClick }: CustomArrowProps) => (
+  <button
+    className="!flex items-center justify-center  w-6 h-6 rounded-full bg-white shadow-lg absolute -left-0  top-1/2 -translate-y-1/2 z-10 hover:bg-primary-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-300 lg:-left-8"
+    onClick={onClick}
+  >
+    <i className="ri-arrow-left-s-line text-lg text-tertiary-950"></i>
+  </button>
+);
+
+const PrevArrow = ({ onClick }: CustomArrowProps) => (
+  <button
+    className="!flex items-center justify-center w-6 h-6 rounded-full bg-white shadow-lg absolute -right-0 top-1/2 -translate-y-1/2 z-10 hover:bg-primary-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-300 lg:-right-8"
+    onClick={onClick}
+  >
+    <i className="ri-arrow-right-s-line text-lg text-tertiary-950"></i>
+  </button>
+);
 
 const Hero: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLAnchorElement>(null);
+  const sliderRef = useRef<Slider>(null);
 
   const images = [
     { src: "/images/photo_2024-10-24_02-52-56.jpg", alt: "Hero Image 1" },
@@ -85,8 +110,21 @@ const Hero: React.FC = () => {
     lazyLoad: 'progressive',
     centerMode: true,
     centerPadding: '40px',
-    arrows: true,
-    className: "center",
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    className: "center custom-slider",
+    pauseOnHover: true,
+    swipeToSlide: true,
+    appendDots: (dots: React.ReactNode) => (
+      <div className="!bottom-4">
+        <ul className="flex items-center justify-center gap-2"> {dots} </ul>
+      </div>
+    ),
+    customPaging: () => (
+      <button className="w-3 h-3 rounded-full bg-tertiary-300 hover:bg-tertiary-400 focus:outline-none focus:ring-2 focus:ring-primary-300 transition-colors duration-200">
+        <span className="sr-only">Slide</span>
+      </button>
+    ),
     responsive: [
       {
         breakpoint: 1280,
@@ -100,20 +138,23 @@ const Hero: React.FC = () => {
         settings: {
           slidesToShow: 2,
           centerPadding: '20px',
+          dots: true,
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           centerPadding: '10px',
-          dots: false,
+          dots: true,
+          arrows: false,
         }
       }
     ]
   };
+
   return (
-      <section className="bg-secondary-200 rounded-t-md min-h-screen py-16 lg:py-24 flex flex-col gap-12 lg:gap-24 font-vazir overflow-hidden">
+    <section className="bg-secondary-200 rounded-t-md min-h-screen py-16 lg:py-24 flex flex-col gap-12 lg:gap-24 font-vazir overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12">
           <div ref={headerRef} className="fade-in">
@@ -132,14 +173,33 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full px-2 sm:px-4 relative">
+      <div className="w-full px-4 sm:px-8 lg:px-16 relative">
+        <style jsx global>{`
+          .custom-slider {
+            margin: 0 -8px;
+          }
+          .custom-slider .slick-slide {
+            padding: 8px;
+          }
+          .custom-slider .slick-dots li.slick-active button {
+            background-color: var(--primary-600);
+          }
+          @media (max-width: 640px) {
+            .custom-slider {
+              margin: 0 -4px;
+            }
+            .custom-slider .slick-slide {
+              padding: 4px;
+            }
+          }
+        `}</style>
         <div className="max-w-[1200px] mx-auto">
           <div className="slider-container">
-            <Slider {...sliderSettings}>
+            <Slider ref={sliderRef} {...sliderSettings}>
               {images.map((image, index) => (
-                <div key={index} className="outline-none px-1 sm:px-2 h-full flex items-end"> {/* اضافه کردن flex و items-end */}
-                  <div className="relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-102 bg-gray-100 w-full">
-                    <div className="aspect-w-4 aspect-h-3 flex items-end"> {/* اضافه کردن flex و items-end */}
+                <div key={index} className="outline-none h-full">
+                  <div className="relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 bg-gray-100">
+                    <div className="aspect-w-4 aspect-h-3">
                       <Image
                         className="object-contain w-full"
                         src={image.src}
@@ -163,7 +223,7 @@ const Hero: React.FC = () => {
         <Link 
           href="/products" 
           ref={buttonRef}
-          className="group flex items-center gap-2 bg-primary-300 text-tertiary-950 hover:bg-tertiary-800 px-6 py-3 rounded-lg transition-all duration-300 ease-out transform hover:scale-102 shadow-md hover:shadow-lg"
+          className="group flex items-center gap-2 bg-primary-300 text-tertiary-950 hover:bg-tertiary-800 px-6 py-3 rounded-lg transition-all duration-300 ease-out transform hover:scale-105 shadow-md hover:shadow-lg"
         >
           <span className="text-base font-medium">نمایش کاتالوگ محصولات</span>
           <i className="ri-arrow-right-line text-lg transform transition-transform duration-300 group-hover:-translate-x-1 rtl:rotate-180"></i>

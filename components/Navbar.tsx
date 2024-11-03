@@ -4,10 +4,12 @@ import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('fa'); // 'fa' or 'en'
+  const [language, setLanguage] = useState('fa');
   const menuRef = useRef<HTMLElement>(null);
   const menuItemsRef = useRef<HTMLUListElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const pulseAnimationRef = useRef<gsap.core.Tween | null>(null);
 
   const toggleMenu = () => {
     setMenuOpen(true);
@@ -21,9 +23,51 @@ const Header = () => {
     setLanguage(prev => prev === 'fa' ? 'en' : 'fa');
   };
 
+  const createPulseAnimation = () => {
+    if (menuButtonRef.current) {
+      if (pulseAnimationRef.current) {
+        pulseAnimationRef.current.kill();
+      }
+
+      pulseAnimationRef.current = gsap.to(menuButtonRef.current, {
+        boxShadow: '0 0 0 4px rgba(0, 0, 0, 0.1)',
+        scale: 1.05,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut'
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      if (pulseAnimationRef.current) {
+        pulseAnimationRef.current.kill();
+      }
+      if (menuButtonRef.current) {
+        gsap.set(menuButtonRef.current, {
+          boxShadow: 'none',
+          scale: 1
+        });
+      }
+    } else {
+      createPulseAnimation();
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    createPulseAnimation();
+    return () => {
+      if (pulseAnimationRef.current) {
+        pulseAnimationRef.current.kill();
+      }
+    };
+  }, []);
+
   useEffect(() => {
     const menu = menuRef.current;
-    const menuItemsArray = menuItemsRef.current ? Array.from(menuItemsRef.current.children) : [];
+    const menuItemsArray = menuItemsRef.current?.children ? Array.from(menuItemsRef.current.children) : [];
     const socialItems = Array.from(document.querySelectorAll('.social-item'));
     const overlay = overlayRef.current;
 
@@ -102,7 +146,11 @@ const Header = () => {
       <header className="fixed top-0 right-0 w-full flex items-center justify-center px-4 py-3 bg-secondary-200 shadow-md z-50">
         <div className="flex items-center justify-center w-full max-w-6xl">
           <div className="flex items-center space-x-4">
-            <button onClick={toggleMenu} className="text-gray-700 focus:outline-none hover:bg-secondary-300 p-2 rounded-full transition-all">
+            <button 
+              ref={menuButtonRef}
+              onClick={toggleMenu} 
+              className="text-gray-700 focus:outline-none hover:bg-secondary-300 p-2 rounded-full transition-all"
+            >
               <i className={`ri-menu-3-fill text-xl`} />
             </button>
             
@@ -175,10 +223,10 @@ const Header = () => {
             {language === 'fa' ? 'ما را در شبکه‌های اجتماعی دنبال کنید' : 'Follow us on social media'}
           </p>
           <div className="grid grid-cols-4 gap-4">
-            <Link href="/instagram" className="social-item hover:text-primary-600 flex justify-center items-center h-10 w-10 rounded-full hover:bg-secondary-300 transition-all">
+            <Link href="https://www.instagram.com/ghazalnooreparsa?igsh=OXcyeWw3dDF5amxu" className="social-item hover:text-primary-600 flex justify-center items-center h-10 w-10 rounded-full hover:bg-secondary-300 transition-all">
               <i className="ri-instagram-fill text-xl"></i>
             </Link>
-            <Link href="/telegram" className="social-item hover:text-primary-600 flex justify-center items-center h-10 w-10 rounded-full hover:bg-secondary-300 transition-all">
+            <Link href="https://t.me/+3zTjofnPMEZkYThk" className="social-item hover:text-primary-600 flex justify-center items-center h-10 w-10 rounded-full hover:bg-secondary-300 transition-all">
               <i className="ri-telegram-fill text-xl"></i>
             </Link>
           </div>
